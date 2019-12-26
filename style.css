@@ -1,0 +1,112 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slider-wrapper {
+  max-width: 1366px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.slider {
+  max-height: 390px;
+}
+
+.slick-slide img {
+  width: 100%;
+  max-height: 390px;
+}
+
+.slick-next {
+  -webkit-transform: translate(-300%, -50%);
+  -ms-transform: translate(-300%, -50%);
+  transform: translate(-450%, -100%);
+}
+
+.slick-prev {
+  -webkit-transform: translate(300%, -50%);
+  -ms-transform: translate(300%, -50%);
+  transform: translate(300%, -100%);
+  z-index: 500;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 0.75;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  opacity: 0.4;
+}
+
+.slick-prev:before {
+  content: url("https://www.easy.cl/minisitios/iconografia/comando-lateral-izquierdo.svg");
+}
+
+.slick-next:before {
+  content: url("https://www.easy.cl/minisitios/iconografia/comando-lateral-derecho.svg");
+}
+
+/* progress bar */
+.slider-progress {
+  width: 100%;
+  max-width: 1366px;
+  height: 5px;
+  background: #d8d8d8;
+  position: absolute;
+  /* bottom: 0; */
+}
+.slider-progress .progress {
+  height: 5px;
+  background: #ee1f24;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.progress-animation {
+  animation: progressbar-countdown;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-play-state: initial;
+  animation-timing-function: linear;
+}
+
+@keyframes progressbar-countdown {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/*Slider text*/
+.slider-nav-text {
+  position: relative;
+  z-index: 1;
+  background-color: #666666;
+  opacity: 0.7;
+  height: 27px;
+  text-align: center;
+}
+
+.slide-text {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+}
+
+.slider-nav-text .slick-slide {
+  margin: 0px 10px;
+}
+
+.slider-nav-text .slick-current {
+  font-weight: bold;
+}
